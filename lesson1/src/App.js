@@ -65,4 +65,8 @@ function App() {
     );
 }
 
+function fake() {
+    return 'fake';
+}
+
 export default App;
