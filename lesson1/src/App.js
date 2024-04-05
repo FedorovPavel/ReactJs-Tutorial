@@ -66,6 +66,7 @@ function App() {
 }
 
 function fake() {
+    console.log("FAKE");
     return 'fake';
 }
 
