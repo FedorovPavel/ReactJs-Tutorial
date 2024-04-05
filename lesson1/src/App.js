@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import TodoList from './ToDo/TodoList';
 import Context from './context';
 import Loader from './Loader';
@@ -9,6 +9,7 @@ const AddTodo = React.lazy(() => { return import('./ToDo/addTodo')});
 function App() {
     const [state, setList] = React.useState([]);
     const [loading, setLoading] = React.useState(true);
+    const [me, setMe] = useState('A');
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
